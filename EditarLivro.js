@@ -77,7 +77,7 @@ const EditarLivroScreen = ({ route }) => {
             placeholder="Author"
           />
           <TextInput
-            style={styles.input}
+            style={styles.inputDescription}
             value={description}
             onChangeText={setDescription}
             placeholder="Description"
@@ -90,8 +90,8 @@ const EditarLivroScreen = ({ route }) => {
             placeholder="Image URI"
           />
           <Image style={styles.image} source={{ uri: book.image }} />
-          <Button title="Editar" onPress={handleEdit} />
-          <Button title="Excluir" onPress={() => handleDelete(book._id)} />
+          <Button style={styles.btn} title="Editar" onPress={handleEdit} />
+          <Button style={styles.btn} title="Excluir" onPress={() => handleDelete(book._id)} />
         </>
       )}
     </View>
@@ -106,8 +106,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   input: {
-    width: '80%',
+    width: '90%',
     height: 40,
+    borderWidth: 1,
+    borderColor: 'gray',
+    marginBottom: 10,
+    paddingHorizontal: 10,
+  },
+  inputDescription: {
+    width: '90%',
+    height: 150,
     borderWidth: 1,
     borderColor: 'gray',
     marginBottom: 10,
@@ -115,7 +123,12 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 200,
-    height: 200,
+    height: 300,
+    borderWidth: 1,
+    borderRadius: 5,
+  },
+  btn:{
+    paddingHorizontal: 50,
   },
 });
 

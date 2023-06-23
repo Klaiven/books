@@ -30,40 +30,40 @@ const AddLivro = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Title:</Text>
+      <Text style={styles.label}>Titulo:</Text>
       <TextInput
         style={styles.input}
         value={title}
         onChangeText={setTitle}
-        placeholder="Enter the title"
+        placeholder="Insira o Titulo"
       />
 
-      <Text style={styles.label}>Author:</Text>
+      <Text style={styles.label}>Autor:</Text>
       <TextInput
         style={styles.input}
         value={author}
         onChangeText={setAuthor}
-        placeholder="Enter the author"
+        placeholder="Insira o Autor"
       />
 
-      <Text style={styles.label}>Description:</Text>
+      <Text style={styles.inputDescription}>Descrição:</Text>
       <TextInput
         style={styles.input}
         value={description}
         onChangeText={setDescription}
-        placeholder="Enter the description"
+        placeholder="Insira a Descrição"
         multiline
       />
 
-      <Text style={styles.label}>Image URI:</Text>
+      <Text style={styles.label}>Link da Imagem:</Text>
       <TextInput
         style={styles.input}
         value={imageURI}
         onChangeText={setImageURI}
-        placeholder="Enter the image URI"
+        placeholder="Insira o Link da Imagem"
       />
 
-      <Button title="Add Livro" onPress={handleAddLivro} />
+      <Button title="Adicionar Livro" onPress={handleAddLivro} />
     </View>
   );
 };
@@ -86,6 +86,15 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     marginBottom: 20,
     paddingHorizontal: 10,
+  },
+  inputDescription: {
+    width: '100%',
+    height: 150,
+    borderWidth: 1,
+    borderColor: 'gray',
+    marginBottom: 20,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
   },
 });
 

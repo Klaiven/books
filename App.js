@@ -53,7 +53,7 @@ export default function App() {
           options={{
             title: "Adicionar Livro",
             headerStyle: {
-              backgroundColor: "black",
+              backgroundColor: "black"
             },
             headerTintColor: "white",
             headerTitleStyle: {

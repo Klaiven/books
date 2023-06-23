@@ -38,18 +38,18 @@ const Books = () => {
 
   return (
     <View style={styles.container}>
-      <Button title="Adicionar Livro" onPress={handleAddLivro} />
-      <FlatList
+      <Button style={styles.btn} title="Adicionar Livro" onPress={handleAddLivro} />
+      <FlatList 
         data={books}
         keyExtractor={item => item._id}
         renderItem={({ item }) => (
           <TouchableOpacity onPress={() => handleEdit(item._id)}>
-            <View style={styles.item}>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.author}>By {item.autor}</Text>
-              <Text style={styles.description}>{item.descricao}</Text>
-              <Image style={styles.image} source={{ uri: item.image }} />
-            </View>
+              <View style={styles.item}>
+                <Image style={styles.image} source={{ uri: item.image }} />
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.author}>By {item.autor}</Text>
+                <Text style={styles.description}>{item.descricao}</Text>
+              </View>
           </TouchableOpacity>
         )}
         refreshControl={
@@ -63,18 +63,26 @@ const Books = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 50,
-    paddingHorizontal: 20,
+    paddingTop: 20,
     backgroundColor: '#fff',
   },
   item: {
-    backgroundColor: '#f9c2ff',
-    padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
+    borderWidth: 1,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    marginHorizontal: 50,
+  },
+  btn:{
+    
+    flex: 1,
+    
+
   },
   title: {
-    fontSize: 20,
+    fontSize: 25,
+    textAlign: 'center',
     fontWeight: 'bold',
   },
   author: {
@@ -87,8 +95,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   image: {
-    width: 200,
-    height: 200,
+    width: "100%",
+    height: 450,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
   },
 });
 

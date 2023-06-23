@@ -17,7 +17,7 @@ const AddLivro = () => {
     };
 
     axios
-      .post('http://192.168.0.10:3000/book/add', newLivro)
+      .post('http://192.168.0.105:3000/book/add', newLivro)
       .then(response => {
         console.log(response.data); // Handle the response as needed
         // You can also navigate to a different screen or perform any other actions upon successful creation

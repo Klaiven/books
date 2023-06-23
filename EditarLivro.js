@@ -12,7 +12,7 @@ const EditarLivroScreen = ({ route }) => {
 
   useEffect(() => {
     axios
-      .get(`http://192.168.0.10:3000/book/${id}`)
+      .get(`http://192.168.0.105:3000/book/${id}`)
       .then(response => {
         setBook(response.data.book);
         setTitle(response.data.book.title);
@@ -34,7 +34,7 @@ const EditarLivroScreen = ({ route }) => {
     };
 
     axios
-      .put(`http://192.168.0.10:3000/book/update/${id}`, updatedBook)
+      .put(`http://192.168.0.105:3000/book/update/${id}`, updatedBook)
       .then(response => {
         console.log(response.data); // Handle the response as needed
         // You can also navigate to a different screen or perform any other actions upon successful update
@@ -48,7 +48,7 @@ const EditarLivroScreen = ({ route }) => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://192.168.0.10:3000/book/delete/${id}`)
+      .delete(`http://192.168.0.105:3000/book/delete/${id}`)
       .then(response => {
         console.log(response.data); // Handle the response as needed
         // You can also update the books list or perform any other actions upon successful deletion

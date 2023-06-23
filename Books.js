@@ -21,7 +21,7 @@ const Books = () => {
     setRefreshing(true);
 
     axios
-      .get('http://192.168.0.10:3000/book')
+      .get('http://192.168.0.105:3000/book')
       .then(response => {
         setBooks(response.data.books);
         setRefreshing(false);

@@ -16,8 +16,6 @@ node app.js
 
 Agora na pagina raiz configurar front:
 
-npm install react-native-safe-area-context
-
-npm install react-native-gesture-handler
+npx expo install react-native-gesture-handler@~2.9.0 react-native-safe-area-context@4.5.0
 
 Npm start
